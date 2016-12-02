@@ -3,79 +3,14 @@
     Author Wesbite: www.aneeshbhatnagar.com
     Project Name: Pomodoro  Timer
 */
-
-a{
-    color:inherit;
-    text-decoration: none;
-}
-
-a:hover, a:visited, a:active{
-    color:inherit;
-    text-decoration: none;
-}
-
-.button{
-    text-align: center;
-    padding:10px 30px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.button:hover{
-    opacity: 0.75;
-}
-
-#startTimer{
-    background: #008000;
-    color:#ffffff;
-    margin-right:10px;
-}
-
-#stopTimer{
-    background: #FF0000;
-    color:#000000;
-    margin-right:10px;
-}
-
-#startBreak{
-    background: #777777;
-    color:#000000;
-    cursor: default;
-}
-
-#clockdiv{
-    font-family: sans-serif;
-    color: #000000;
+.center-align-buttons{
+    width:398px;
     display: block;
-    font-weight: 100;
+    margin:20px auto;
+}
+
+#timer{
     text-align: center;
-    font-size: 30px;
-    margin-top:60px;
-
-}
-
-#clockdiv > div{
-    padding: 10px;
-    border-radius: 3px;
-    background: #cccccc;
-    display: inline-block;
-}
-
-#clockdiv div > span{
-    padding: 15px;
-    border-radius: 3px;
-    background: #777777;
-    display: inline-block;
-    color:#ffffff;
-}
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 16px;
-}
-
-h1{
-    text-align: center;
-    color:#444444;
-    margin-bottom: 40px;
+    font-size:45px;
+    color:#a1a1a1;
 }
