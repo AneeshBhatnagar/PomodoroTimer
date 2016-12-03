@@ -3,21 +3,59 @@
 <head>
 	<title>Pomodoro Timer</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Pomodoro Timer</h1>
-	<p style="text-align:center;"><a href="#" id="startTimer" onclick="startTimer()" class="button">Start Timer</a><a href="#" id="stopTimer" onclick="stopTimer()" class="button">Stop Timer</a></p>
-	<div id="clockdiv">
-		<div>
-		    <span class="minutes"></span>
-		    <div class="smalltext">Minutes</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-3 col-sm-offset-0 col-xs-offset-0">
+				<h1 style="text-align: center;">Pomodoro Timer</h1>
+			</div>
 		</div>
-		<div>
-			<span class="seconds"></span>
-		    <div class="smalltext">Seconds</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="center-align-buttons">
+					<button type="button" class="btn btn-md btn-success" onclick="startTimer('pomodoro')">Start Timer</button>
+					<button type="button" class="btn btn-md btn-warning" onclick="startTimer('shortB')">Short Break</button>
+					<button type="button" class="btn btn-md btn-primary" onclick="startTimer('longB')">Long Break</button>
+					<button type="button" class="btn btn-md btn-danger" onclick="stopTimer()">Stop Timer</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 id="timer">00:00</h1>
+			</div>
+		</div>
+		<div class="row" style="margin-top:40px;">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-0 col-xs-offset-0">
+				<div>
+
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#pomodoro" aria-controls="pomodoro" role="tab" data-toggle="tab">About Pomodoro Technique</a></li>
+				    <li role="presentation"><a href="#faqs" aria-controls="faqs" role="tab" data-toggle="tab">Settings</a></li>
+				    <!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="pomodoro">
+					    <h3>Pomodoro Technique:</h3>
+					    <p>Under development...</p>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="faqs">
+				    	<h3>Settings</h3>
+				    	<p>Under development...</p>
+				    </div>
+				  </div>
+
+				</div>
+			</div>
 		</div>
 	</div>
-	<p style="text-align:center; margin-top:50px;"><a href="#" id="startBreak" onclick="startBreak()" class="button">Start Timer</a></p>
-	<script type="text/javascript" src="js/script.js"></script>
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/pomodoro.js"></script>
 </body>
-</html>
