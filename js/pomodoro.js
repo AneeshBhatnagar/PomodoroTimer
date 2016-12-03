@@ -31,8 +31,8 @@ function startTimer(type){
   else if (type == 'longB')
     mins = 10
   console.log(mins);
-  //deadline = new Date(Date.parse(new Date()) + mins * 60 * 1000);
-  deadline = new Date(Date.parse(new Date()) + 10 * 1000);
+  deadline = new Date(Date.parse(new Date()) + mins * 60 * 1000);
+  //deadline = new Date(Date.parse(new Date()) + 10 * 1000);
   updateClock();
   timeinterval = setInterval(updateClock, 1000);  
 }
