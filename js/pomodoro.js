@@ -1,7 +1,8 @@
 var clock = document.getElementById('timer');
 var deadline, timeinterval, alarminterval,  status;
 var audio = new Audio('assets/bell.mp3');
-
+var defaultColor = '#a1a1a1'
+var runningColor = '#000000'
 status = 0;
 
 function startTimer(type){
@@ -13,6 +14,7 @@ function startTimer(type){
     if(ans==1){
         status = 0;
         clearInterval(timeinterval);
+        clock.style.color = defaultColor;
     }
     else{
       return;
@@ -20,6 +22,7 @@ function startTimer(type){
   }
 
   status = 1
+  clock.style.color = runningColor;
   mins = 0
   if(type == 'pomodoro')
     mins = 25
@@ -28,17 +31,19 @@ function startTimer(type){
   else if (type == 'longB')
     mins = 10
   console.log(mins);
-  deadline = new Date(Date.parse(new Date()) + mins * 60 * 1000);
-  //deadline = new Date(Date.parse(new Date()) + 10 * 1000);
+  //deadline = new Date(Date.parse(new Date()) + mins * 60 * 1000);
+  deadline = new Date(Date.parse(new Date()) + 10 * 1000);
   updateClock();
   timeinterval = setInterval(updateClock, 1000);  
 }
 
 function stopTimer(){
   status = 0;
+
   audio.pause();
   clearInterval(timeinterval);
   clearInterval(alarminterval);
+  clock.style.color = defaultColor;
   clock.innerHTML = "00:00"
   console.log("Timer stopped!");
 }
@@ -62,6 +67,7 @@ function updateClock() {
   clock.innerHTML = updateTime
   if(t.total == 0){
       status = false;
+      clock.style.color = defaultColor;
       clearInterval(timeinterval);
       triggerAlarm();
   }
